@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 import LineChart from "../components/LineChart";
 import BarChart from "../components/BarChart";
-import PieChart from "../components/PieChart";
 
 export default function Dashboard() {
   return (
@@ -9,11 +8,7 @@ export default function Dashboard() {
       <Navbar />
       <div className="p-4">
         <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-        <p>Aqui você pode exibir:</p>
-        <ul className="list-disc ml-6">
-          <li>Mapa com a localização dos dispositivos.</li>
-          <li>Gráficos das últimas medições.</li>
-        </ul>
+        <p>Controle dos insumos do gado:</p>
       </div>
       <div className="w-full h-auto flex justify-center items-start gap-4 mt-8">
         <div className="flex-1 p-4 bg-white rounded-lg shadow-lg max-w-md">
