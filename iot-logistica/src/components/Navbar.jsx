@@ -17,6 +17,9 @@ const Navbar = () => {
           <Link to="/insumocriadouro" className="font-bold hover:text-blue-400">Insumos</Link>
         </li>
         <li>
+          <Link to="/readings" className="font-bold hover:text-blue-400">Leituras</Link>
+        </li>
+        <li>
           <Link to="/compra" className="font-bold hover:text-blue-400">Compra</Link>
         </li>
         <li>
