@@ -3,6 +3,7 @@ FROM node:18-alpine
 
 # diretório de trabalho dentro do container
 WORKDIR /app
+COPY . /app
 
 # Copia os arquivos do projeto para o container
 COPY . .
