@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    image: reacttopicos:latest
+    container_name: containeriot
+    ports:
+      - "1000:1000" 
+    restart: unless-stopped
+
