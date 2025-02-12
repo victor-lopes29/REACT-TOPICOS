@@ -1,24 +1,20 @@
-#  imagem oficial do Node.js como base
-FROM node:18-alpine
+# Use uma imagem base do Node.js
+FROM node:16-alpine
 
-# diretório de trabalho dentro do container
+# Defina o diretório de trabalho no container
 WORKDIR /app
-COPY . /app
 
-# Copia os arquivos do projeto para o container
-COPY . .
+# Copie os arquivos package.json e package-lock.json para o container
+COPY package*.json ./
 
-#  dependências do projeto
+# Instale as dependências
 RUN npm install
 
-# Constrói o projeto React
-RUN npm run build
+# Copie o restante do código do projeto para o container
+COPY . .
 
-# Instala um servidor web para servir o build do React
-RUN npm install -g serve
+# Exponha a porta que a aplicação irá utilizar
+EXPOSE 3000
 
-# Expõe a porta 6000
-EXPOSE 6000
-
-# rodar o servidor
-CMD ["serve", "-s", "build", "-l", "6000"]
+# Comando para iniciar a aplicação
+CMD ["npm", "start"]
